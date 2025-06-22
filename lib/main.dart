@@ -11,15 +11,18 @@ class MyApp extends StatelessWidget {
       title: 'Prueba 1',
       home: Scaffold(
         appBar: AppBar(backgroundColor: Colors.green),
-        body: const Center(
+        body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             spacing: 40,
             children: [
-              SizedBox(width: 30),
-              Text('Welcome to Reminders', style: TextStyle(fontSize: 24)),
+              const SizedBox(width: 30),
+              const Text(
+                'Welcome to Reminders',
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              ),
 
-              Row(
+              const Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Icon(Icons.event_note_rounded, size: 70, color: Colors.green),
@@ -42,7 +45,7 @@ class MyApp extends StatelessWidget {
                   ),
                 ],
               ),
-              Row(
+              const Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Icon(
@@ -69,7 +72,7 @@ class MyApp extends StatelessWidget {
                   ),
                 ],
               ),
-              Row(
+              const Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Icon(Icons.person_2_outlined, size: 70, color: Colors.yellow),
@@ -92,7 +95,7 @@ class MyApp extends StatelessWidget {
                   ),
                 ],
               ),
-              Row(
+              const Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Icon(Icons.list, size: 70, color: Colors.blue),
@@ -115,6 +118,20 @@ class MyApp extends StatelessWidget {
                   ),
                 ],
               ),
+              const SizedBox(height: 60),
+              ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blue,
+                  foregroundColor: Colors.white,
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 130,
+                    vertical: 12,
+                  ),
+                ),
+                child: const Text('Continue'),
+              ),
+              const SizedBox(height: 20),
             ],
           ),
         ),
